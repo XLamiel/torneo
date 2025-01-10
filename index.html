@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="XLamiel">
+    <link rel="shortcut icon" href="./assets/favicon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <title>XL TorneoFutbolin</title>
+</head>
+<body>
+    <header>
+        <div class="top-header"></div>
+        <div class="contenedor-header">
+            <div class="contenedorXL">
+                <div class="xl__x1 xl--sombra"></div>
+                <div class="xl__x2 xl--sombra"></div>
+                <div class="xl__l1 xl--sombra"></div>
+                <div class="xl__l2 xl--sombra"></div>
+                <div class="xl__x1 xl--color"></div>
+                <div class="xl__x2 xl--color"></div>
+                <div class="xl__l1 xl--color"></div>
+                <div class="xl__l2 xl--color"></div>
+            </div>
+            <div class="titulo">
+                <h1>Pruebas: Combinación + Round Robin</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="contenedor">
+            <div id="combinador">
+                <form id="participantesCombinar" class="form1">
+                    <fieldset class="fieldset1">
+                        <legend>Generador de parejas</legend>
+                        <div>
+                            <label for="participantes">Participantes:</label>
+                            <textarea id="participantes" placeholder="Introduce los nombres de los participantes, uno por línea..."></textarea>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset2">
+                        <button type="submit">Generar Combinaciones</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div id="roundRobin">
+                <form id="equiposRoundRobin" class="form1">
+                    <fieldset class="fieldset1">
+                        <legend>Generador de rondas RR</legend>
+                        <label for="equipos">Equipos:</label>
+                        <textarea id="equipos" placeholder="Introduce los nombres de los equipos, uno por línea..."></textarea>
+                        <label for="validacionIndividual"> Validacion Individual</label><br>
+                        <input type="checkbox" id="validacionIndividual" name="validacionIndividual" value="Bike">
+                    </fieldset>
+                    <fieldset class="fieldset2">
+                        <button type="submit">Generar Rondas</button>
+                    </fieldset>
+                </form>
+            </div>
+            <div id="results"></div>
+        </div>     
+    </main>
+    <footer class="footer">
+        <div class="divIzq">
+            <p>&copy; Copyright 01/2025</p>
+        </div>
+        <div class="divDer">
+            <p>Realizado por: XLamiel</p>
+        </div>
+    </footer>
+</body>
+<script src="./js/app.js"></script>
+</html>

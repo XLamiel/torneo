@@ -1,0 +1,319 @@
+/*
+    INICIO CSS 
+*/
+
+.form1 {
+    width: 300px;
+    height: auto;
+    margin: 40px auto 40px auto;
+    background-color: beige;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.200);
+}
+
+.fieldset1 {
+    margin: 30px 10px 10px 10px;
+    border: 1px solid black;
+}
+
+.fieldset1 legend {
+    padding: 10px;
+    /* color: red; */
+    color: darkslategray;
+}
+
+.fieldset1 label {
+    display: inline-block;
+    color: darkslategray;
+    width: 90%;
+    margin: 10px 10px 0 10px;
+}
+
+.fieldset1 textarea {
+    width: 90%;
+    /* background-color:rgb(160, 255, 255); */
+    /* background-color: rgb(200, 175, 255); */
+    background-color: rgb(90, 155, 155);
+    color: beige;
+    padding: 5px;
+    margin: 0 10px 10px 10px;
+    border: none;
+    resize: vertical;
+}
+
+.fieldset1 textarea:hover {
+    opacity: 0.6 !important;
+    color: white;
+}
+
+.fieldset1 input {
+    margin: 10px 10px 10px 10px;
+}
+
+.fieldset2 {
+    text-align: center;
+    padding: 0;
+    border: none;
+    margin: 0 0 0 0;
+}
+
+.fieldset2 button {
+    width: 100%;
+    line-height: 40px;
+    font-size: medium;
+    color: white;
+    border: none;
+    margin: 0 0 0 0;
+}
+
+
+.fieldset2 button {
+    background-color: rebeccapurple;
+}
+
+.fieldset2 button:hover {
+    background-color: #008d8d;
+    cursor: pointer;
+}
+
+#results {
+    width: 200px;
+    margin: 40px auto 40px auto;
+}
+
+#results {
+    background-color: beige;
+    color: black;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/*
+    FIN CSS
+*/
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+
+body {
+
+    display: flex;      /* La idea es poder utilizar "margin-top: auto" en el footer */
+                        /*      para que siempre esté al fondo en las páginas con poco contenido */
+                        /* Eso nos obliga en aquellos casos donde hay poco contenido, */
+                        /*      a "agrandar el body al tamaño de pantalla. */
+    
+    flex-direction: column;     /* Restablezco el flujo de renderizado de arriba a abajo */
+                                /*      así se visualizan bien todos los elementos*/
+                                /**/
+
+    min-height: 100vh;  /* Extiendo, como mínimo, el body al tamaño de pantalla */
+                        /*      vh => View Height, cada unidad representa  */
+                        /*      1% del alto del Viewport */
+                        /*      entonces 100vh es igual a 100% del alto del Viewport */
+    /* background: linear-gradient(141deg, cyan 0%, rebeccapurple 100%); */
+    background-color: darkslategray;
+    color: beige;
+}
+
+/* 
+    HEADER
+    Inicio
+*/
+
+header {
+    width: 100%;
+    height: 94px;
+
+    background-color: black;
+    color: beige;
+    text-decoration: underline;
+
+    overflow: hidden; /* Para controlar el colapsado de margenes entre "header" y "h1" (padres e hijos) */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+header .top-header {
+    width: 100%;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+	background: linear-gradient(141deg, cyan 0%, rebeccapurple 40%, deeppink 90%);
+}
+
+header .contenedor-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 84px;
+}
+
+/* 
+    LOGO XLamiel
+    Inicio
+*/
+
+/* 
+/* 
+    El ancho del contenedor es:
+        alto x 0,85
+    ============================
+    El alto del contenedor es:
+        ancho x 1,176470588
+*/
+
+/* 
+    Inicio
+    50 ancho x 60 alto
+    X:Y
+*/
+.contenedorXL {
+    --xl-ratio: 1;
+    --xl12-width-50x60: 8px;
+    --x1-height-50x60: 45px;
+    --x1-top-50x60: 0px;
+    --x1-left-50x60: 12px;
+    --x2-height-50x60: 50px;
+    --x2-top-50x60: 1px;
+    --x2-left-50x60: 17px;
+    --l1-height-50x60: 45px;
+    --l1-top-50x60: 10px;
+    --l1-left-50x60: 25px;
+    --l2-height-50x60: 30px;
+    --l2-top-50x60: 38px;
+    --l2-left-50x60: 31px;
+
+    --sombra-roja:
+        0 0 5px rgba(255, 0, 0, 1),
+        0 0 10px rgba(255, 0, 0, 1),
+        0 0 20px rgba(255, 0, 0, 1),
+        0 0 40px rgba(127, 38, 38, 1),
+        0 0 80px rgba(127, 38, 38, 1),
+        0 0 90px rgba(127, 38, 38, 1),
+        0 0 100px rgba(127, 38, 38, 1),
+        0 0 140px rgba(127, 38, 38, 1),
+        0 0 180px rgba(127, 38, 38, 1);
+
+    --sombra-color: var(--sombra-roja); /* asigno una sombra que ya tengo predefinida, así todas las modificaciones, las realizo desde las variables */
+
+    position: relative;
+    height: calc(60px * var(--xl-ratio));
+    width: calc(50px * var(--xl-ratio));
+    border: 1px solid white;
+    margin: 0 20px 0 10px;
+}
+
+.xl--sombra {
+    box-shadow: var(--sombra-color);
+}
+
+.xl--color {
+    background-color: beige;
+}
+
+.xl__x1,
+.xl__x2,
+.xl__l1,
+.xl__l2 {
+    position: absolute;
+    width: calc(var(--xl12-width-50x60) * var(--xl-ratio));    
+}
+
+.xl__x1 {
+    height: calc(var(--x1-height-50x60) * var(--xl-ratio));
+    top: calc(var(--x1-top-50x60) * var(--xl-ratio));
+    left: calc(var(--x1-left-50x60) * var(--xl-ratio));
+    transform: rotate(29deg);
+}
+
+.xl__x2 {
+    height: calc(var(--x2-height-50x60) * var(--xl-ratio));
+    top: calc(var(--x2-top-50x60) * var(--xl-ratio));
+    left: calc(var(--x2-left-50x60) * var(--xl-ratio));
+    transform: rotate(-47deg);
+}
+
+.xl__l1 {
+    height: calc(var(--l1-height-50x60) * var(--xl-ratio));
+    top: calc(var(--l1-top-50x60) * var(--xl-ratio));
+    left: calc(var(--l1-left-50x60) * var(--xl-ratio));
+    transform: rotate(14deg);
+}
+
+.xl__l2 {
+    height: calc(var(--l2-height-50x60) * var(--xl-ratio));
+    top: calc(var(--l2-top-50x60) * var(--xl-ratio));
+    left: calc(var(--l2-left-50x60) * var(--xl-ratio));
+    transform: rotate(-80deg);
+    border-top-right-radius: 100% 30%;
+}
+/* 
+    LOGO XLamiel
+    Fin
+*/
+
+/* 
+    HEADER
+    Fin
+*/
+
+/* 
+    FOOTER
+    Inicio
+*/
+.footer {
+    display: flex;
+    justify-content: space-between ;
+    background-color: black;
+    color: beige;
+    overflow: hidden; /* Para controlar el colapsado de margenes entre "footer" y "p" (padres e hijos) */
+    margin-top: auto;
+}
+
+    .divIzq {
+        margin-left: 10px;
+    }
+
+    .divDer {
+        margin-right: 10px;
+    }
+/* 
+    FOOTER
+    Inicio
+*/
+
+
+@media screen and (max-width: 767px) {
+    header {
+        height: 74px;
+    }
+
+    header .contenedor-header {
+        height: 64px;
+    }
+
+    .contenedorXL {
+        --xl-ratio: .7;
+    }
+    
+    header h1 {
+        font-size: larger;
+    }
+
+    .divIzq {
+        font-size: small;
+    }
+
+    .divDer {
+        font-size: small;
+    }
+}
