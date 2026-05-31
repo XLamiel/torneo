@@ -91,11 +91,11 @@ function displayResults2(rounds) {
 
                 const contieneElementos = match[1].split(" - ").some(elemento => match[0].split(" - ").includes(elemento));
                 if (!contieneElementos) {
-                    matchItem.textContent = `${match[0]} vs ${match[1]}`;
+                    matchItem.textContent = `${match[0]}\t${match[1]}`;
                     roundList.appendChild(matchItem);
                 }
             } else {
-                matchItem.textContent = `${match[0]} vs ${match[1]}`;
+                matchItem.textContent = `${match[0]}\t${match[1]}`;
                 roundList.appendChild(matchItem);
             }
 
